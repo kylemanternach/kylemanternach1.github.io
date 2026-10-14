@@ -75,6 +75,16 @@ export const projects = [
 		tags: ['hmm', 'viterbi', 'baum-welch'],
 		href: withBase('/projects/market-regimes/'),
 		image: withBase('/projects/project-cover.jpg'),
+		link: 'paper',
+	},
+	{
+		name: 'Recourse',
+		description:
+			'A macOS desktop app that guides people through California small claims court, from checking eligibility and filling out the SC-100 forms to filing, serving, and preparing for the hearing. An AI agent works through each phase of the case inside a sandbox.',
+		tags: ['electron', 'typescript', 'ai-agents'],
+		href: 'https://github.com/kylemanternach1/recourse',
+		image: withBase('/projects/recourse-cover.png'),
+		link: 'github',
 	},
 ];
 
