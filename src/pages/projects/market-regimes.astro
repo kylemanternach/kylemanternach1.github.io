@@ -1,0 +1,79 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import SiteNav from '../../components/SiteNav.astro';
+import { withBase } from '../../consts';
+
+const pages = [1, 2, 3, 4].map((page) => withBase(`/projects/market-regimes/page-${page}.png`));
+const pdf = withBase('/projects/market-regimes-hmm.pdf');
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Detecting Market Regimes"
+			description="ECE 186 paper on classifying S&P 500 market regimes with Baum-Welch and Viterbi."
+		/>
+	</head>
+	<body class="portfolio">
+		<SiteNav />
+		<main class="paper">
+			<p class="back"><a href={withBase('/#projects')}>Projects</a></p>
+			<h1>Detecting Market Regimes</h1>
+			<p class="download"><a href={pdf} download>Download PDF</a></p>
+			{
+				pages.map((src, index) => (
+					<img src={src} alt={`Page ${index + 1} of Detecting Market Regimes`} />
+				))
+			}
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.paper {
+		width: min(860px, calc(100% - 2rem));
+		margin: 5.5rem auto 3rem;
+	}
+
+	.back {
+		margin: 0 0 0.5rem;
+	}
+
+	.back a,
+	.download a {
+		color: #36454f;
+		font-weight: 600;
+	}
+
+	:global(html[data-theme='dark']) .back a,
+	:global(html[data-theme='dark']) .download a {
+		color: #e6e4e3;
+	}
+
+	h1 {
+		margin: 0;
+		color: #111;
+		font-size: clamp(1.8rem, 4vw, 2.6rem);
+		line-height: 1.15;
+	}
+
+	:global(html[data-theme='dark']) h1 {
+		color: #f2f0ef;
+	}
+
+	.download {
+		margin: 0.8rem 0 1.5rem;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 0 1.25rem;
+		border-radius: 8px;
+		background: #fff;
+	}
+</style>

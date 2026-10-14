@@ -69,16 +69,12 @@ export const technologies = [
 
 export const projects = [
 	{
-		name: 'Project name',
-		description: 'One or two sentences on what it is and why it matters.',
-		tags: ['python'],
-		href: 'https://github.com/kylemanternach1',
-	},
-	{
-		name: 'Another project',
-		description: 'Replace this card with a real project, including a link and a short description.',
-		tags: ['c++'],
-		href: 'https://github.com/kylemanternach1',
+		name: 'Detecting Market Regimes',
+		description:
+			'Classified each trading day of the S&P 500 from 2010 to 2026 as bull, bear, or sideways using only SPY prices. A Gaussian hidden Markov model is fit with Baum-Welch, and Viterbi recovers the regime sequence, including the 2020 crash and the 2022 downturn.',
+		tags: ['hmm', 'viterbi', 'baum-welch'],
+		href: withBase('/projects/market-regimes/'),
+		image: withBase('/projects/project-cover.jpg'),
 	},
 ];
 
