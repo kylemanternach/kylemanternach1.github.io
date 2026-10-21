@@ -154,7 +154,11 @@ const emphasize = (text: string) =>
 							<div class="reveal reveal-from-bottom" style={`--delay: ${index * 0.5}s`}>
 							<article class="project-card">
 								<div class="project-thumb">
-									<img src={project.image} alt="" />
+									<img
+										class={project.imageFit === 'contain' ? 'fit-contain' : undefined}
+										src={project.image}
+										alt={project.imageAlt ?? ''}
+									/>
 									<a href={project.href} target="_blank" rel="noopener noreferrer">
 										<span class="sr-only">
 											{project.link === 'github' ? 'GitHub repository' : 'Paper'} for {project.name}

@@ -4,7 +4,7 @@ export const profile = {
 	firstName: 'Kyle',
 	lastName: 'Manternach',
 	role: 'Computer Engineering Student',
-	github: 'https://github.com/kylemanternach1',
+	github: 'https://github.com/kylemanternach',
 	linkedin: 'https://www.linkedin.com/in/kyledmanternach',
 	overview:
 		"I'm a Computer Engineering student at UC Santa Barbara, pursuing a B.S. with a minor in Data Science and an M.S. in Computer Science. I've gained industry experience through software and product roles at CapitolAI, BeReal, and Polymarket, where I've worked across AI workflows, user research, and consumer-app onboarding. I'm particularly interested in building reliable software and applying what I learn to real problems. I'm always looking to learn, take on new challenges, and build things that have an impact. Feel free to reach out if you'd like to connect!",
@@ -75,6 +75,8 @@ export const projects = [
 		tags: ['hmm', 'viterbi', 'baum-welch'],
 		href: withBase('/projects/market-regimes/'),
 		image: withBase('/projects/project-cover.jpg'),
+		imageAlt: 'SPY price from 2010 to 2026, colored by bull, bear, and sideways regimes',
+		imageFit: 'contain',
 		link: 'paper',
 	},
 	{
@@ -82,7 +84,7 @@ export const projects = [
 		description:
 			'A macOS desktop app that guides people through California small claims court, from checking eligibility and filling out the SC-100 forms to filing, serving, and preparing for the hearing. An AI agent works through each phase of the case inside a sandbox.',
 		tags: ['electron', 'typescript', 'ai-agents'],
-		href: 'https://github.com/kylemanternach1/recourse',
+		href: 'https://github.com/kylemanternach/recourse',
 		image: withBase('/projects/recourse-cover.png'),
 		link: 'github',
 	},
